@@ -13,3 +13,13 @@
   color: white;
 }
 
+.swiper-container {
+  width: 100%;
+  margin: 2rem auto;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  width: 500px;
+  height: 500px;
+}
