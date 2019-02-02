@@ -1,11 +1,11 @@
 import { StyleRoot } from 'radium';
 import React from 'react';
+import data from '../data/data';
+import Film from './Film';
+
+
 var Coverflow = require('react-coverflow');
 
-
-var fn = function () {
-    /* do you want */
-}
 
 export default class Gallery extends React.Component {
 
@@ -13,6 +13,8 @@ export default class Gallery extends React.Component {
         super(props);
 
         this.state = {
+            properties:data.properties,
+            property: data.properties[0],
             active: 0
         };
     }
@@ -25,6 +27,9 @@ export default class Gallery extends React.Component {
     }
 
     render() {  
+
+        // eslint-disable-next-line no-unused-vars
+        const {properties,property} = this.state;
 
         return(
         <StyleRoot>
@@ -50,24 +55,11 @@ export default class Gallery extends React.Component {
                 }
             }}
         >
-            <div
-                onClick={() => fn()}
-                onKeyDown={() => fn()}
-                role="menuitem"
-                tabIndex="0"
-            >
-                <img
-                    src='https://via.placeholder.com/1000x1000'
-                    alt='Film 1'
-                    style={{ display: 'block', width: '100%' }}
-                />
-            </div>
-                    <img src='https://via.placeholder.com/1000x1000' alt='Film 2' data-action="http://andyyou.github.io/react-coverflow/" />
-                    <img src='https://via.placeholder.com/1000x1000' alt='Film 3' data-action="http://andyyou.github.io/react-coverflow/" />
-                    <img src='https://via.placeholder.com/1000x1000' alt='Film 3' data-action="http://andyyou.github.io/react-coverflow/" />
-                    <img src='https://via.placeholder.com/1000x1000' alt='Film 3' data-action="http://andyyou.github.io/react-coverflow/" />
-                    <img src='https://via.placeholder.com/1000x1000' alt='Film 3' data-action="http://andyyou.github.io/react-coverflow/" />
-                    <img src='https://via.placeholder.com/1000x1000' alt='Film 3' data-action="http://andyyou.github.io/react-coverflow/" />
+    
+            {
+                properties.map(property => <Film key={property.index} property={property} />)
+            }
+                  
         </Coverflow>
         </StyleRoot>
 
