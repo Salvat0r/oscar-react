@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import Carousel from './components/Carousel';
+import Gallery from './components/Coverflow';
 
 import './App.css';
 
@@ -11,7 +11,7 @@ class App extends Component {
         <header className="App-header">
           <h1>React</h1>
         </header>
-        <Carousel />
+        <Gallery />
       </div>
     );
   }
