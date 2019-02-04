@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express": "^4.16.4",
+    "radium": "^0.25.1",
     "react": "^16.7.0",
+    "react-coverflow": "^0.2.18",
     "react-dom": "^16.7.0",
     "react-id-swiper": "^1.6.8",
     "react-scripts": "2.1.3",
