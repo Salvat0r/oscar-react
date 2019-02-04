@@ -4,6 +4,11 @@ import Carousel from './components/Carousel';
 
 import './App.css';
 
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { faThumbsUp } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faThumbsUp);
+
 class App extends Component {
   render() {
     return (
